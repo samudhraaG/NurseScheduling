@@ -1,0 +1,9 @@
+node_modules
+node
+.idea
+*.iml
+docs
+target
+.tmp
+coverage
+__del
