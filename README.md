@@ -1,4 +1,4 @@
-INSE 6260 Nurse Scheduling Project [![Build Status](https://travis-ci.org/egemsoft/spring-mvc-angular.svg?branch=master)](https://travis-ci.org/egemsoft/spring-mvc-angular)
+INSE 6260 Nurse Scheduling Project 
 -----------------------
 
 
