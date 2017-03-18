@@ -1,9 +1,7 @@
-Spring MVC Angular JS Seed Project [![Build Status](https://travis-ci.org/egemsoft/spring-mvc-angular.svg?branch=master)](https://travis-ci.org/egemsoft/spring-mvc-angular)
+INSE 6260 Nurse Scheduling Project [![Build Status](https://travis-ci.org/egemsoft/spring-mvc-angular.svg?branch=master)](https://travis-ci.org/egemsoft/spring-mvc-angular)
 -----------------------
 
-This is a one handy seed project includes Spring Framework, Spring MVC, Maven, Angular JS with both Java and Javascript tests.
 
-![egemsoft-logo](http://egemsoft.net/images/logo.png)
 
 ##Install
 Project has various dependencies managed through Maven, NPM and Bower. Luckily they have all connected in Maven with frontend-maven-plugin.
@@ -83,7 +81,7 @@ $ grunt serve
 ```
 
 ##Author
-İsmail Demirbilek ([@dbtek](http://twitter.com/dbtek))  
+(C) Team Hyperion, INSE 6260 Concordia University, Montreal, Canada
 
 ##License
 [MIT](http://opensource.org/licenses/MIT)
@@ -98,4 +96,5 @@ $ grunt serve
 - [Bower](http://bower.io)
 - [Grunt](http://gruntjs.com) and its awesome plugins.
 - [Phantom JS](http://phantomjs.org/)
+- [@dbtek](http://twitter.com/dbtek) Ismail Demirbilek for the seed project skeleton
 - [Karma](http://karma-runner.github.io/0.12/index.html) and inside it Jasmine, İstanbul.
