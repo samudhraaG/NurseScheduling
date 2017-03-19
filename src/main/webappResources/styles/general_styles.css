@@ -3104,7 +3104,7 @@ body .ui-tooltip {
 }
 
 .login-body {
-    background: #d9e0e9;
+    background: #333333;
     height: 100%;
     display: table;
     width: 100%;
@@ -3135,7 +3135,7 @@ body .ui-tooltip {
 }
 
 .login-page h1 {
-    background: url(../img/big-logo.png) 0 0 no-repeat;
+    background: url(../images/nurse_logo.png) 0 0 no-repeat;
     width: 231px;
     height: 90px;
     position: absolute;
