@@ -362,9 +362,9 @@
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
+                <li class="active"><a style="text-decoration: none ;" href="#">Home</a></li>
+                <li><a style="text-decoration: none ;" href="#">Schedule</a></li>
+                <li><a style="text-decoration: none ;" href="#">Profile</a></li>
             </ul>
         </div>
     </nav>
@@ -392,11 +392,8 @@
                                         <img src="../images/no-photo.png" alt="user-image" style="max-height:100%;display:inline-block;;overflow:hidden;">
                                     </div>
                                 </a>
-
-
-
-                                <form enctype="multipart/form-data" action="https://www.lrdgportal.com/saveProfileImage/20fd2ae2-1c8b-462a-aae2-9128fe463a87" method="post">
-                                    <img src="./My Profile_files/no-photo(1).png" width="166" height="166" alt="" class="img">
+                                <form enctype="multipart/form-data" action="#" method="post">
+                                    <img src="../images/no-photo(1).png" width="166" height="166" alt="" class="img">
 
                                     <div class="inputs">
                                         <label for="photo">Select file </label>
@@ -413,7 +410,7 @@
                                 <input type="hidden" id="passwordResetErrorMessage1" value="Password reset failed. Reason: This learner has not yet filled out the registration form.">
                                 <input type="hidden" id="passwordResetErrorMessage2" value="Password reset failed. Reason: This user has not yet activated his or her account.">
                             </div>
-                            <div class="profile-container" style="background-color:bisque;">
+                            <div class="profile-container" style="background-color:#f8f8f8;">
 
                                 <div class="col-1">
 
@@ -430,66 +427,32 @@
                                         </div>
 
                                         <div class="form-item">
-                                            <label for="status">Learner Status</label>
-                                            <select class="form-select" name="studentstatusSelect" id="studentstatus" disabled="&#39;disabled&#39;">
-                                                <option value="New">Awaiting Activation </option>
-                                                <option value="AwaitingEval">Awaiting Evaluation </option>
-                                                <option value="EvalScheduled">Evaluation Scheduled </option>
-                                                <option value="AwaitingTutor">Awaiting Access </option>
-                                                <option selected="" value="Active">Active </option>
-                                                <option value="Hold">On Hold </option>
-                                                <option value="AwaitingAuth">Awaiting Authorization </option>
-                                                <option value="Complete">Completed </option>
-                                                <option value="Quit">Quit </option>
+                                            <label for="status">Status</label>
+                                            <select class="form-select" name="currentstatusSelect" id="currentstatus">
+                                                <option value="New">Available</option>
+                                                <option value="AwaitingEval">Awaiting Appointment </option>
+                                                <option value="EvalScheduled">Busy</option>
                                                 <option value="Inactive">Inactive </option>
-                            </select>
-
+                                            </select>
                                         </div>
+
                                         <div class="form-item">
 
-                                            <label for="methodology">Methodology</label>
-                                            <select class="form-select" name="methodologySelect" id="methodology" disabled="&#39;disabled&#39;">
-                                            <option value="FullTime">Full Time</option>
-                                            <option value="PartTime">Part Time</option>
-                                            <option selected="" value="SelfDirected">Self Directed</option>
-                                            <option value="SpecialProject">Special Project</option>
-                                            <option value="Evaluation">SLE</option>
-                                            <option value="Classroom">Group</option>
-                                            <option value="Maintenance">Maintenance</option>
-                                            <option value="AcceleratedPartTime">Accelerated part time</option>
-                            </select>
+                                            <label for="profession">Profession</label>
+                                            <select class="form-select" name="professionSelect" id="profession">
+                                                <option value="nurse">Licensed Nurse</option>
+                                            </select>
 
                                         </div>
-                                        <div class="form-item">
-                                            <label for="language">Language</label>
-                                            <select class="form-select" name="languageSelect" id="language" disabled="&#39;disabled&#39;">
-                                <option value="EN" selected="selected">English</option>
-                                <option value="FR">French</option>
-                            </select>
 
-                                        </div>
-                                        <div class="form-item">
-                                            <label for="courseMaterial">Learning Materials</label>
-
-                                            <input type="hidden" name="web" value="on">
-
-                                            <input type="checkbox" onclick="RemindFunction()" id="dvd" name="dvd" disabled=""> DVD <input type="checkbox" onclick="&#39;RemindFunction()&#39;" id="web" name="web" checked="" disabled=""> Web
-                                        </div>
                                         <div class="form-item">
                                             <input type="hidden" id="canChangeCM" name="canChangeCM" value="1">
                                         </div>
                                         <div class="form-item">
-                                            <label for="groups">Associated Groups</label>
-                                            <select class="form-select" name="groups" id="groups" onchange=" location = this.options[this.selectedIndex].value;">
-                                    <option value="group"></option>
-                                </select>
-                                        </div>
-                                        <div class="form-item">
                                             <label for="employer">Employer</label>
                                             <select class="form-select" name="employer" id="employer" disabled="disabled">
-                                    <option selected="selected" value="38b19f8e-ca50-4258-a01a-e36f508b0758">Caffeine - West</option>
-                                
-                            </select>
+                                                    <option selected="selected" value="38b19f8e-ca50-4258-a01a-e36f508b0758">Caffeine - West</option>
+                                             </select>
                                         </div>
 
                                         <div class="form-item">
@@ -511,81 +474,16 @@
                                             <label for="alternate_email">Secondary Email </label>
                                             <input type="text" name="alternateEmail" id="alternate_email" value="" class="form-text">
                                         </div>
-
-
-                                        <div class="form-item">
-                                            <label class="check-label">
-                            <input type="checkbox" class="form-checkbox" id="dont_send_emails" name="dont_send_emails">
-                            Do not send me automated messages.
-                        </label>
-                                        </div>
-
-                                        <div class="tab-data">
-
-                                            <div id="phones" class="add-fields">
-
-                                                <div class="phoneItem">
-                                                    <input type="hidden" name="isnew[]" class="isnew" value="0">
-
-
-                                                </div>
-
-                                                <div class="edit-field add-phone-section">
-                                                    <div class="form-item">
-                                                        <label for="contact_type_edit" class="label-type">Contact Type</label>
-                                                        <select class="form-select" name="phoneType-new" style="width: 110px;">
-                                            <option value="Home">Home Phone</option>
-                                            <option value="Home2">Alt Home Phone</option>
-                                            <option value="Work">Work Phone</option>
-                                            <option value="Work2">Alt Work Phone</option>
-                                            <option value="Mobile">Cell Phone</option>
-                                            <option value="Other">Other</option>
-                                            <option value="Fax">Fax</option>
-                                    </select>
-                                                    </div>
-
-                                                    <div class="form-item">
-                                                        <label for="contact_value_edit" class="label-value">Value</label>
-                                                        <input type="text" name="phoneNumber-new" value="" class="form-text addphonenumber" style="width: 100px;" maxlength="20">
-                                                        <label class="label-value" style="width: 30px;">Ext.</label>
-                                                        <input type="text" name="extNumber-new" value="" class="form-extension" style="width: 35px;" maxlength="10">
-                                                    </div>
-
-                                                    <div class="buttons">
-                                                        <a href="https://www.lrdgportal.com/profile#" class="light-button addphone">Add</a>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
                                     </form>
-
-
-                                    <div class="phoneItem phoneTemplate hidden">
-                                        <input type="hidden" name="isnew[]" class="isnew" value="1">
-
-                                        <div class="form-item">
-                                            <label></label>
-
-                                            <div class="form-value">
-                                                <span class="phone"></span>
-                                                <span class="phonextension">Ext.:</span>
-                                                <span class="extension"></span>
-                                            </div>
-
-                                            <a href="https://www.lrdgportal.com/profile#" class="light-button editphone">Edit</a>
-                                        </div>
-
-
-                                    </div>
 
                                     <div class="password-block">
                                         <label>Password</label>
-                                        <a href="https://www.lrdgportal.com/profile#" class="change-password-link">Change Password</a>
+                                        <a href="#" class="change-password-link">Change Password</a>
                                     </div>
                                 </div>
+                                <!-- Bottom Buttons-->
                                 <div class="bottom-buttons">
-                                    <input type="submit" value="Save" class="blue-button save-button">\
+                                    <input type="submit" value="Save" class="btn btn-primary">
                                 </div>
                             </div>
                         </div>

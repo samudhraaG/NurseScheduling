@@ -89,27 +89,6 @@ a img {
     border: none;
 }
 
-
-/*
-@font-face {
-	font-family: 'Partner';
-	src: local('-'), url('../fonts/partcn.woff') format('woff'), url('../fonts/partcn.ttf') format('truetype'), url('../fonts/partcn.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-    font-family: 'Partner';
-    src: url('../fonts/armata.eot');
-    src: url('../fonts/armata.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/armata.woff') format('woff'),
-         url('../fonts/armata.ttf') format('truetype'),
-         url('../fonts/armata.svg#gandhi_sansregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-*/
-
 @font-face {
     font-family: 'Partner';
     src: url('../fonts/aller.eot');
@@ -3104,7 +3083,7 @@ body .ui-tooltip {
 }
 
 .login-body {
-    background: #333333;
+    background: #d9e0e9;
     height: 100%;
     display: table;
     width: 100%;
@@ -3243,39 +3222,6 @@ body .ui-tooltip {
     top: 30px;
     color: #8896a3;
 }
-
-
-/*.login-page .grey-button.button-en {
-	background:#e5e9ee url(../img/bg-grey-button.png) 0 0 repeat-x;
-	border:1px solid #d9dfe8;
-	display:block;
-	float:left;
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px;
-	border-radius:10px;
-	behavior: url(PIE.htc);	
-	text-decoration:none;
-	position:absolute;
-	left:605px;
-	top:548px;		
-	color:#8896a3;	
-}
-
-.login-page .grey-button.button-fr {
-	background:#e5e9ee url(../img/bg-grey-button.png) 0 0 repeat-x;
-	border:1px solid #d9dfe8;
-	display:block;
-	float:left;
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px;
-	border-radius:10px;
-	behavior: url(PIE.htc);	
-	text-decoration:none;
-	position:absolute;
-	left:684px;
-	top:548px;		
-	color:#8896a3;	
-}*/
 
 .login-page .grey-button:hover {
     color: #60778f;
