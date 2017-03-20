@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import community.healthcare.boimpl.AgencyBoImpl;
-import community.healthcare.boimpl.DoctorBoImpl;
+import community.healthcare.boimpl.NurseBoImpl;
 import community.healthcare.boimpl.PatientBoImpl;
-import community.healthcare.model.Doctor;
-import community.healthcare.model.PRequest;
+import community.healthcare.model.Nurse;
+import community.healthcare.model.PatientRequest;
 import community.healthcare.model.Patient;
 
 @Controller
@@ -46,7 +46,7 @@ public class PatientController {
 	@RequestMapping(value = "/pviewdoctor")
 	public ModelAndView aviewdoctor() {
 		PatientBoImpl abi = new PatientBoImpl();
-		List<Doctor> data = abi.aviewdoctor();
+		List<Nurse> data = abi.aviewdoctor();
 		ModelAndView mv = new ModelAndView("pviewdoctor");
 		mv.addObject("data", data);
 		return mv;
@@ -55,14 +55,14 @@ public class PatientController {
 	@RequestMapping(value = "/prequest")
 	public ModelAndView prequest() {
 		PatientBoImpl abi = new PatientBoImpl();
-		List<Doctor> data = abi.prequest();
+		List<Nurse> data = abi.prequest();
 		ModelAndView mv = new ModelAndView("prequest");
 		mv.addObject("data", data);
 		return mv;
 	}
 
 	@RequestMapping(value = "/prequestsubmit", method = RequestMethod.POST)
-	public ModelAndView prequestsubmit(@ModelAttribute("prequest") PRequest prequest, HttpServletRequest request) {
+	public ModelAndView prequestsubmit(@ModelAttribute("prequest") PatientRequest prequest, HttpServletRequest request) {
 		String pemail = (String) request.getSession().getAttribute("pemail");
 		prequest.setPatientEmail(pemail);
 		prequest.setStatus("Requested");
@@ -77,7 +77,7 @@ public class PatientController {
 	public ModelAndView pviewstatus(HttpServletRequest request) {
 		String pemail = (String) request.getSession().getAttribute("pemail");
 		PatientBoImpl abi = new PatientBoImpl();
-		List<PRequest> data = abi.pviewstatus(pemail);
+		List<PatientRequest> data = abi.pviewstatus(pemail);
 		ModelAndView mv = new ModelAndView("pviewstatus");
 		mv.addObject("data", data);
 		return mv;

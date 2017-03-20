@@ -7,8 +7,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import community.healthcare.model.Doctor;
-import community.healthcare.model.PRequest;
+import community.healthcare.model.Nurse;
+import community.healthcare.model.PatientRequest;
 import community.healthcare.model.Patient;
 
 public class PatientRepository {
@@ -36,20 +36,20 @@ public class PatientRepository {
 		sessionfactory.close();
 		return msg;
 	}
-	public List<Doctor> aviewdoctor() {
+	public List<Nurse> aviewdoctor() {
 		session.beginTransaction();
 		Query query=session.createQuery("from Doctor");
-		List<Doctor> data=(List<Doctor>)query.list();
+		List<Nurse> data=(List<Nurse>)query.list();
 		
 		return data;
 	}
-	public List<Doctor> prequest() {
+	public List<Nurse> prequest() {
 		session.beginTransaction();
 		Query query=session.createQuery("from Doctor");
-		List<Doctor> data=(List<Doctor>)query.list();
+		List<Nurse> data=(List<Nurse>)query.list();
 		return data;
 	}
-	public String prequestsubmit(PRequest prequest) {
+	public String prequestsubmit(PatientRequest prequest) {
 		session.beginTransaction();
 		String msg=null;
 		try{
@@ -63,10 +63,10 @@ public class PatientRepository {
 		sessionfactory.close();
 		return msg;
 	}
-	public List<PRequest> pviewstatus(String pemail) {
+	public List<PatientRequest> pviewstatus(String pemail) {
 		session.beginTransaction();
 		Query query=session.createQuery("from PRequest where patientEmail='"+pemail+"'");
-		List<PRequest> data=(List<PRequest>)query.list();
+		List<PatientRequest> data=(List<PatientRequest>)query.list();
 		return data;
 	}
 	public String pcancelconform(int requestId, String note) {

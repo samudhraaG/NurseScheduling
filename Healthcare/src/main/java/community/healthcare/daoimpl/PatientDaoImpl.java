@@ -2,8 +2,8 @@ package community.healthcare.daoimpl;
 
 import java.util.List;
 
-import community.healthcare.model.Doctor;
-import community.healthcare.model.PRequest;
+import community.healthcare.model.Nurse;
+import community.healthcare.model.PatientRequest;
 import community.healthcare.model.Patient;
 import community.healthcare.service.PatientRepository;
 
@@ -17,19 +17,19 @@ public class PatientDaoImpl {
 		// TODO Auto-generated method stub
 		return patientService.pupdateprofile(patient,pemail);
 	}
-	public List<Doctor> aviewdoctor() {
+	public List<Nurse> aviewdoctor() {
 		// TODO Auto-generated method stub
 		return patientService.aviewdoctor();
 	}
-	public List<Doctor> prequest() {
+	public List<Nurse> prequest() {
 		// TODO Auto-generated method stub
 		return patientService.prequest();
 	}
-	public String prequestsubmit(PRequest prequest) {
+	public String prequestsubmit(PatientRequest prequest) {
 		// TODO Auto-generated method stub
 		return patientService.prequestsubmit(prequest);
 	}
-	public List<PRequest> pviewstatus(String pemail) {
+	public List<PatientRequest> pviewstatus(String pemail) {
 		// TODO Auto-generated method stub
 		return patientService.pviewstatus(pemail);
 	}

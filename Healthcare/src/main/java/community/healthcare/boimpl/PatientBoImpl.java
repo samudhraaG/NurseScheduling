@@ -3,8 +3,8 @@ package community.healthcare.boimpl;
 import java.util.List;
 
 import community.healthcare.daoimpl.PatientDaoImpl;
-import community.healthcare.model.Doctor;
-import community.healthcare.model.PRequest;
+import community.healthcare.model.Nurse;
+import community.healthcare.model.PatientRequest;
 import community.healthcare.model.Patient;
 
 public class PatientBoImpl {
@@ -17,19 +17,19 @@ public class PatientBoImpl {
 		
 		return patientDAO.updatePatientProfile(patient,pemail);
 	}
-	public List<Doctor> aviewdoctor() {
+	public List<Nurse> aviewdoctor() {
 		// TODO Auto-generated method stub
 		 return patientDAO.aviewdoctor();
 	}
-	public List<Doctor> prequest() {
+	public List<Nurse> prequest() {
 		// TODO Auto-generated method stub
 		return patientDAO.prequest();
 	}
-	public String prequestsubmit(PRequest prequest) {
+	public String prequestsubmit(PatientRequest prequest) {
 		// TODO Auto-generated method stub
 		return patientDAO.prequestsubmit(prequest);
 	}
-	public List<PRequest> pviewstatus(String pemail) {
+	public List<PatientRequest> pviewstatus(String pemail) {
 		// TODO Auto-generated method stub
 		return patientDAO.pviewstatus(pemail);
 	}
