@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0078)http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a -->
+<!-- saved from url=(0078)#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width">
     
@@ -7,7 +7,7 @@
     <title>Calendar/Weekly View</title>
 
     <link rel="stylesheet" href="../styles/general_main.css">
-
+    <link rel="stylesheet" href="../styles/bootstrap.css">
     <link href="../styles/modified_jquery-ui.css" rel="stylesheet" type="text/css">
     <link href="../styles/general_styles.css" rel="stylesheet" type="text/css">
     <link href="../styles/ToggleSwitch.css" rel="stylesheet" type="text/css">
@@ -21,11 +21,10 @@
     <script type="text/javascript" src="../scripts/js/jquery.titlealert.js"></script>
     <script src="../scripts/js/js.js" type="text/javascript"></script>
     <script src="../scripts/js/base.js" type="text/javascript"></script>
-    
+    <script src="../scripts/js/bootstrap.js" type="text/javascript"></script>
     <script src="../scripts/js/json2.min.js"></script>
     
     
-    <link href="http://www.dev2.lrdgtech.ca//img/LRDGFavicon.png" rel="icon" id="LRDGFavicon" type="images/png">
 
     <style type="text/css">
         li:focus, span:focus, a:focus, textarea:focus {
@@ -39,7 +38,16 @@
 
 <style type="text/css" id="vakata-stylesheet">#vakata-dragged { display:block; margin:0 0 0 0; padding:4px 4px 4px 24px; position:absolute; top:-2000px; line-height:16px; z-index:10000; } #vakata-contextmenu { display:block; visibility:hidden; left:0; top:-200px; position:absolute; margin:0; padding:0; min-width:180px; background:#ebebeb; border:1px solid silver; z-index:10000; *width:180px; } #vakata-contextmenu ul { min-width:180px; *width:180px; } #vakata-contextmenu ul, #vakata-contextmenu li { margin:0; padding:0; list-style-type:none; display:block; } #vakata-contextmenu li { line-height:20px; min-height:20px; position:relative; padding:0px; } #vakata-contextmenu li a { padding:1px 6px; line-height:17px; display:block; text-decoration:none; margin:1px 1px 0 1px; } #vakata-contextmenu li ins { float:left; width:16px; height:16px; text-decoration:none; margin-right:2px; } #vakata-contextmenu li a:hover, #vakata-contextmenu li.vakata-hover > a { background:gray; color:white; } #vakata-contextmenu li ul { display:none; position:absolute; top:-2px; left:100%; background:#ebebeb; border:1px solid gray; } #vakata-contextmenu .right { right:100%; left:auto; } #vakata-contextmenu .bottom { bottom:-1px; top:auto; } #vakata-contextmenu li.vakata-separator { min-height:0; height:1px; line-height:1px; font-size:1px; overflow:hidden; margin:0 2px; background:silver; /* border-top:1px solid #fefefe; */ padding:0; } </style><style type="text/css" id="jstree-stylesheet">.jstree ul, .jstree li { display:block; margin:0 0 0 0; padding:0 0 0 0; list-style-type:none; } .jstree li { display:block; min-height:18px; line-height:18px; white-space:nowrap; margin-left:18px; min-width:18px; } .jstree-rtl li { margin-left:0; margin-right:18px; } .jstree > ul > li { margin-left:0px; } .jstree-rtl > ul > li { margin-right:0px; } .jstree ins { display:inline-block; text-decoration:none; width:18px; height:18px; margin:0 0 0 0; padding:0; } .jstree a { display:inline-block; line-height:16px; height:16px; color:black; white-space:nowrap; text-decoration:none; padding:1px 2px; margin:0; } .jstree a:focus { outline: none; } .jstree a > ins { height:16px; width:16px; } .jstree a > .jstree-icon { margin-right:3px; } .jstree-rtl a > .jstree-icon { margin-left:3px; margin-right:0; } li.jstree-open > ul { display:block; } li.jstree-closed > ul { display:none; } #vakata-dragged ins { display:block; text-decoration:none; width:16px; height:16px; margin:0 0 0 0; padding:0; position:absolute; top:4px; left:4px;  -moz-border-radius:4px; border-radius:4px; -webkit-border-radius:4px; } #vakata-dragged .jstree-ok { background:green; } #vakata-dragged .jstree-invalid { background:red; } #jstree-marker { padding:0; margin:0; font-size:12px; overflow:hidden; height:12px; width:8px; position:absolute; top:-30px; z-index:10001; background-repeat:no-repeat; display:none; background-color:transparent; text-shadow:1px 1px 1px white; color:black; line-height:10px; } #jstree-marker-line { padding:0; margin:0; line-height:0%; font-size:1px; overflow:hidden; height:1px; width:100px; position:absolute; top:-30px; z-index:10000; background-repeat:no-repeat; display:none; background-color:#456c43;  cursor:pointer; border:1px solid #eeeeee; border-left:0; -moz-box-shadow: 0px 0px 2px #666; -webkit-box-shadow: 0px 0px 2px #666; box-shadow: 0px 0px 2px #666;  -moz-border-radius:1px; border-radius:1px; -webkit-border-radius:1px; }.jstree .jstree-real-checkbox { display:none; } .jstree-themeroller .ui-icon { overflow:visible; } .jstree-themeroller a { padding:0 2px; } .jstree-themeroller .jstree-no-icon { display:none; }.jstree .jstree-wholerow-real { position:relative; z-index:1; } .jstree .jstree-wholerow-real li { cursor:pointer; } .jstree .jstree-wholerow-real a { border-left-color:transparent !important; border-right-color:transparent !important; } .jstree .jstree-wholerow { position:relative; z-index:0; height:0; } .jstree .jstree-wholerow ul, .jstree .jstree-wholerow li { width:100%; } .jstree .jstree-wholerow, .jstree .jstree-wholerow ul, .jstree .jstree-wholerow li, .jstree .jstree-wholerow a { margin:0 !important; padding:0 !important; } .jstree .jstree-wholerow, .jstree .jstree-wholerow ul, .jstree .jstree-wholerow li { background:transparent !important; }.jstree .jstree-wholerow ins, .jstree .jstree-wholerow span, .jstree .jstree-wholerow input { display:none !important; }.jstree .jstree-wholerow a, .jstree .jstree-wholerow a:hover { text-indent:-9999px; !important; width:100%; padding:0 !important; border-right-width:0px !important; border-left-width:0px !important; } .jstree .jstree-wholerow-span { position:absolute; left:0; margin:0px; padding:0; height:18px; border-width:0; padding:0; z-index:0; }</style></head>
 <body style="height: auto;">
-    <input type="hidden" id="base-address" name="base-address" value="http://www.dev2.lrdgtech.ca/">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li class="active"><a style="text-decoration: none ;" href="#">Home</a></li>
+                <li><a style="text-decoration: none ;" href="#">Schedule</a></li>
+                <li><a style="text-decoration: none ;" href="#">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+    <input type="hidden" id="base-address" name="base-address" value="#">
     <input type="hidden" id="GlobalMessageError" value="Learner creation failed. Please make sure  your client contract includes the required evaluations.">
     <input type="hidden" id="GlobalMessageErrorUserName" value="A user with the same email address already exists.">
     <input type="hidden" id="GlobalMessageSuccess" value="The user was created successfully!">
@@ -48,12 +56,12 @@
     <input type="hidden" id="session-time-out" value="6">
     <input type="hidden" id="before-session-time-out" value="1">
     <input type="hidden" id="documentTitle" value="Calendar/Weekly View">
-    <input type="hidden" id="imgPath" value="http://www.dev2.lrdgtech.ca//img/">
+    <input type="hidden" id="imgPath" value="#">
 
     <div class="top-bg">
         <div class="bottom-bg">
             <div class="main-cont">
-                <input type="hidden" id="printer-friendly-page-address" value="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a">
+                <input type="hidden" id="printer-friendly-page-address" value="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a">
                 <div id="txt-time"></div>
                 <div class="header no-print">
                     
@@ -62,34 +70,34 @@
                             
                             <h2><span>Language Research Development Group</span></h2>
                         </div>
-                        <div class="menu">
+                        <!--<div class="menu">
 
                             <ul class="main-menu">
 
-                                <li tabindex="1"><a tabindex="-1" class="home-icon" href="http://www.dev2.lrdgtech.ca/index/"><span class="icon">Home<span class="notification-empty"></span></span></a><span class="offscreen">Opens the Home page</span></li>
+                                <li tabindex="1"><a tabindex="-1" class="home-icon" href="#/index/"><span class="icon">Home<span class="notification-empty"></span></span></a><span class="offscreen">Opens the Home page</span></li>
 
                                 
                                 
-<li tabindex="2"><a tabindex="-1" class="messages-icon" href="http://www.dev2.lrdgtech.ca/messages/94c69e4f-0b51-45ac-8fef-e877ead2976a"><span class="icon">Messages<span class="notification">2</span></span></a><span class="offscreen">Opens the Messages page</span></li><li tabindex="-1"><a tabindex="-1" class="users-icon" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#" onclick="cancelEvent(event);"><span class="icon">Accounts<span class="notification-empty"></span></span></a>                                        <ul class="submenu">
-                                            <li><a href="http://www.dev2.lrdgtech.ca/studentlist">Learners</a></li>
+<li tabindex="2"><a tabindex="-1" class="messages-icon" href="#/messages/94c69e4f-0b51-45ac-8fef-e877ead2976a"><span class="icon">Messages<span class="notification">2</span></span></a><span class="offscreen">Opens the Messages page</span></li><li tabindex="-1"><a tabindex="-1" class="users-icon" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#" onclick="cancelEvent(event);"><span class="icon">Accounts<span class="notification-empty"></span></span></a>                                        <ul class="submenu">
+                                            <li><a href="#/studentlist">Learners</a></li>
                                             
 
                                         </ul>
-</li><li tabindex="10" class="selected"><a tabindex="-1" class="calendar-icon" href="http://www.dev2.lrdgtech.ca/calendar/month/94c69e4f-0b51-45ac-8fef-e877ead2976a?popup=false"><span class="left"><span class="right"><span class="icon">Calendar<span class="notification-empty"></span></span></span></span></a><span class="offscreen">Opens the Calendar page</span></li><li tabindex="-1"><a tabindex="-1" class="materials-icon" href="http://www.dev2.lrdgtech.ca/CourseMaterials/94c69e4f-0b51-45ac-8fef-e877ead2976a"><span class="icon">Learning Materials<span class="notification-empty"></span></span></a><span class="offscreen">Opens the Learning Materials page</span></li><li tabindex="-1"><a tabindex="-1" class="reports-icon" href="http://www.dev2.lrdgtech.ca/reports/index"><span class="icon">Reports<span class="notification-empty"></span></span></a><span class="offscreen">Opens the Reports page</span></li><li tabindex="-1"><a tabindex="-1" class="forum-icon" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#" onclick="cancelEvent(event);"><span class="icon">Forum<span class="notification">186</span></span></a>                                        <ul class="submenu">
-                                            <li><a href="http://www.dev2.lrdgtech.ca/Forum/LearnerForumLandingPage/94c69e4f-0b51-45ac-8fef-e877ead2976a">Learners</a></li>
-                                            <li><a href="http://www.dev2.lrdgtech.ca/Forum/TutorForum/94c69e4f-0b51-45ac-8fef-e877ead2976a">Tutors</a></li>
+</li><li tabindex="10" class="selected"><a tabindex="-1" class="calendar-icon" href="#/calendar/month/94c69e4f-0b51-45ac-8fef-e877ead2976a?popup=false"><span class="left"><span class="right"><span class="icon">Calendar<span class="notification-empty"></span></span></span></span></a><span class="offscreen">Opens the Calendar page</span></li><li tabindex="-1"><a tabindex="-1" class="materials-icon" href="#/CourseMaterials/94c69e4f-0b51-45ac-8fef-e877ead2976a"><span class="icon">Learning Materials<span class="notification-empty"></span></span></a><span class="offscreen">Opens the Learning Materials page</span></li><li tabindex="-1"><a tabindex="-1" class="reports-icon" href="#/reports/index"><span class="icon">Reports<span class="notification-empty"></span></span></a><span class="offscreen">Opens the Reports page</span></li><li tabindex="-1"><a tabindex="-1" class="forum-icon" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#" onclick="cancelEvent(event);"><span class="icon">Forum<span class="notification">186</span></span></a>                                        <ul class="submenu">
+                                            <li><a href="#/Forum/LearnerForumLandingPage/94c69e4f-0b51-45ac-8fef-e877ead2976a">Learners</a></li>
+                                            <li><a href="#/Forum/TutorForum/94c69e4f-0b51-45ac-8fef-e877ead2976a">Tutors</a></li>
                                         </ul>
-</li><li tabindex="12"><a tabindex="-1" class="icon-buddy-system" target="_blank" href="http://www.dev2.lrdgtech.ca/BuddySystem/BSMaster/"><span class="icon">Buddy System<span class="notification-empty"></span></span></a><span class="offscreen">Opens the Buddy System page</span></li>
+</li><li tabindex="12"><a tabindex="-1" class="icon-buddy-system" target="_blank" href="#/BuddySystem/BSMaster/"><span class="icon">Buddy System<span class="notification-empty"></span></span></a><span class="offscreen">Opens the Buddy System page</span></li>
                             </ul>
 
 
 
-                        </div>
-                        <div class="right-block">
+                        </div>-->
+                        <!--<div class="right-block">
                             <div class="inner">
                                 <div class="inner2">
                                     <div class="user-menu">
-                                        <a tabindex="-1" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#" onclick="return false;" class="blue-button user-select" style="margin-right: 110px; height: 40px; padding-top: 0px;">
+                                        <a tabindex="-1" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#" onclick="return false;" class="btn btn-primary user-select" style="margin-right: 110px; height: 40px; padding-top: 0px;">
                                             <div class="" style="text-alignment:center;overflow:hidden;"><img src="../scripts/js/no-photo.png" alt="user-image" onerror="this.src=&#39;/Images/no-photo.png&#39;;" style="max-height:100%;display:inline-block;;overflow:hidden;"></div>
                                             <span tabindex="14" style="height: 40px; margin-top: 2px; padding: 0px 20px 0px 37px; vertical-align: middle; display: table-cell;">
                                                     <b>
@@ -98,20 +106,20 @@
                                             </span>
                                         </a>
                                         <ul class="submenu ">
-                                            <li tabindex="15"><a href="http://www.dev2.lrdgtech.ca/profile">My Profile <span class="offscreen">Opens the profile page.</span></a></li>
-                                            <li tabindex="16" class="logout"><a href="http://www.dev2.lrdgtech.ca/Logout">Log Out <span class="offscreen">Clicking on this will log you out.</span></a></li>
+                                            <li tabindex="15"><a href="#/profile">My Profile <span class="offscreen">Opens the profile page.</span></a></li>
+                                            <li tabindex="16" class="logout"><a href="#/Logout">Log Out <span class="offscreen">Clicking on this will log you out.</span></a></li>
                                         </ul>
                                     </div>
-                                        <a tabindex="17" href="http://www.dev2.lrdgtech.ca/HelpDesk" class="blue-button button-help" style="padding:4px 16px 5px 7px;width:60px;"><span style="height: 30px; line-height: 16px; padding-left: 30px; padding-right: 0px; display: table-cell; max-width: 30px;">Help Desk <span class="offscreen">Opens the help page.</span></span></a>
+                                        <a tabindex="17" href="#/HelpDesk" class="btn btn-primary button-help" style="padding:4px 16px 5px 7px;width:60px;"><span style="height: 30px; line-height: 16px; padding-left: 30px; padding-right: 0px; display: table-cell; max-width: 30px;">Help Desk <span class="offscreen">Opens the help page.</span></span></a>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
 
                 <div class="page-head">
 
-                    <h1 style="display: inline; margin-right: 20px; vertical-align: middle">Calendar/Weekly View</h1>
+                    <h1 style="display: inline; margin-right: 20px; vertical-align: middle">Schedule Weekly View</h1>
 
 
                     
@@ -122,7 +130,7 @@
                 
                                     <div style="float: right" class="names no-print">
                         
-                        <form id="quick-search" action="http://www.dev2.lrdgtech.ca/StudentList" method="post" class="masteruser-search">
+                        <!--<form id="quick-search" action="#/StudentList" method="post" class="masteruser-search">
                             <div class="form-item" style="float:right;">
                                 <input type="text" name="lastname" id="lastname" value="" class="form-text" style="width:113px;" placeholder="Last Name">
                                 <input type="text" name="firstname" id="firstname" value="" class="form-text" style="width:113px;" placeholder="First Name">
@@ -130,7 +138,7 @@
                                     <input type="button" style="padding-bottom:8px;" class="form-mastersubmit" value="">
 
                             </div>
-                        </form>
+                        </form>-->
 
                     </div>
 
@@ -148,17 +156,13 @@
   <div class="col-1">
         <div class="cal-left-block">
             <div class="button">
-                     <input type="hidden" id="book-lesson-text" value="Book a Lesson">
-                 <input type="hidden" id="book-evaluation-text" value="Book an Evaluation">
-                <input type="hidden" id="book-eomexam-text" value="Book End of Module Exam">
 
-                <input type="button" class="blue-button" id="add-availability" value="Add Availability" data-date="19.03.2017">
-                <input type="button" class="blue-button" id="book-lesson" title="Warning! Did you verify your tutor&#39;s availability using the calendar? " value="Book a Lesson">
+                <input type="button" class="btn btn-primary" id="add-availability" value="Add Availability" data-date="19.03.2017">
+                <!--<input type="button" class="btn btn-primary" id="book-lesson" title="" value="Book an Appointment">-->
 
                 
             </div>
-            <div class="head">Event Categories</div>
-            <div class="legend">
+            <!--<div class="legend">
                 <label class="lessons">
                     <input type="checkbox" id="lessons-checkbox" data-queryparam="lcu" checked="checked" value="1">
                     <span>Lessons</span></label>
@@ -176,64 +180,55 @@ Learner's Availability                    </span></label>
                 <label class="tutor-availability">
                     <input type="checkbox" id="availability-checkbox" checked="checked" data-queryparam="acu" value="1">
                     <span>My Availability</span></label>
-            </div>
+            </div>-->
         </div>
     </div>
     <div class="col-2">
         <div class="big-cal">
             <div class="head">
-                <a href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.03.22" class="button-grey today">Today</a>
-
-                <a href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.03.12" class="button-grey prev startdate"><span>←</span></a>
-                <a href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.03.26" class="button-grey next startdate"><span>→</span></a>
+                <a href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.03.22" class="button-grey today">Today</a>
 
                 <div class="date-chooser" id="current-month">
 
                     <div class="drop-menu">
                         <div class="current">March</div>
                         <ul>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.01.01">January</a></li>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.02.01">February</a></li>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.03.01">March</a></li>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.04.01">April</a></li>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.05.01">May</a></li>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.06.01">June</a></li>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.07.01">July</a></li>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.08.01">August</a></li>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.09.01">September</a></li>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.10.01">October</a></li>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.11.01">November</a></li>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.12.01">December</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.01.01">January</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.02.01">February</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.03.01">March</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.04.01">April</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.05.01">May</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.06.01">June</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.07.01">July</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.08.01">August</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.09.01">September</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.10.01">October</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.11.01">November</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.12.01">December</a></li>
                         </ul>
                     </div>
 
                     <div class="drop-menu" id="current-year">
                         <div class="current">2017</div>
                         <ul>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2007.01.08">2007</a></li>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2008.01.08">2008</a></li>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2009.01.08">2009</a></li>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2010.01.08">2010</a></li>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2011.01.08">2011</a></li>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2012.01.08">2012</a></li>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2013.01.08">2013</a></li>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2014.01.08">2014</a></li>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2015.01.08">2015</a></li>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2016.01.08">2016</a></li>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.01.08">2017</a></li>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2018.01.08">2018</a></li>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2019.01.08">2019</a></li>
-                            <li><a class="startdate" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2020.01.08">2020</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2007.01.08">2007</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2008.01.08">2008</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2009.01.08">2009</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2010.01.08">2010</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2011.01.08">2011</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2012.01.08">2012</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2013.01.08">2013</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2014.01.08">2014</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2015.01.08">2015</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2016.01.08">2016</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2017.01.08">2017</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2018.01.08">2018</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2019.01.08">2019</a></li>
+                            <li><a class="startdate" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?start=2020.01.08">2020</a></li>
                         </ul>     
                     </div>        
                                   
-                </div>            
-
-                <ul class="multibuttons">
-                    <li><a href="http://www.dev2.lrdgtech.ca/calendar/day/94c69e4f-0b51-45ac-8fef-e877ead2976a">Day</a></li>
-                    <li><a href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#" class="selected">Week</a></li>
-                    <li><a href="http://www.dev2.lrdgtech.ca/calendar/month/94c69e4f-0b51-45ac-8fef-e877ead2976a">Month</a></li>
-                </ul>
+                </div>  
 
             </div>
 
@@ -372,7 +367,7 @@ Learner's Availability                    </span></label>
 
 <div class="popup-form popup-win popup-other">
                             <h6>Add other</h6>
-                            <form action="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?" method="post" class="event-form">
+                            <form action="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?" method="post" class="event-form">
                              <div class="form-item">
                                     <label for="event-name">Name</label>
                                     <input id="other-name" name="event-name" class="form-text" value="">
@@ -408,7 +403,7 @@ Learner's Availability                    </span></label>
                                  
 							 </form>
                             
-                            <div class="buttons"><input type="submit" class="blue-button cancelappointment-button" value="Cancel Appointment" style="display: none;"> <input type="submit" class="blue-button ok-button" value="Ok "> <input type="button" class="blue-button cancel-button" value="Cancel"></div>                         
+                            <div class="buttons"><input type="submit" class="btn btn-primary cancelappointment-button" value="Cancel Appointment" style="display: none;"> <input type="submit" class="btn btn-primary ok-button" value="Ok "> <input type="button" class="btn btn-primary cancel-button" value="Cancel"></div>                         
                       
                     </div>
 
@@ -426,7 +421,7 @@ Learner's Availability                    </span></label>
 <p class="notice24hours" id="lessonnotice" style="margin-left:70px;">Note : 1. You can only book lessons with a 24 hours notice, <br> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  2. The calendar operates in Eastern Time Zone.</p>
   <p class="notice24hours" id="evalnotice" style="margin-left:45px;display:none">Note: 1. We require a minimum of 24 hour notice to book your evaluation, <br> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. The calendar operates in Eastern Time Zone.</p>
 
-    <form action="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?" method="post" class="event-form" id="event-form">
+    <form action="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?" method="post" class="event-form" id="event-form">
         <div class="form-item">
             <label for="event-name">Name</label>
             <input id="event-name" name="event-name" class="form-text" value="">
@@ -491,9 +486,9 @@ Learner's Availability                    </span></label>
 </form>
 
     <div class="buttons">
-        <input type="button" class="blue-button cancelappointment-button" id="cancelAppointmentButton" value="Cancel lesson" style="display: none;">
-        <input type="button" id="bookLessonOK" class="blue-button ok-button" value="Ok ">
-        <input type="button" class="blue-button cancel-button" value="Cancel">
+        <input type="button" class="btn btn-primary cancelappointment-button" id="cancelAppointmentButton" value="Cancel lesson" style="display: none;">
+        <input type="button" id="bookLessonOK" class="btn btn-primary ok-button" value="Ok ">
+        <input type="button" class="btn btn-primary cancel-button" value="Cancel">
     </div>
 
 </div>
@@ -501,10 +496,10 @@ Learner's Availability                    </span></label>
    
       
 <div class="popup-form popup-win popup-avalability" style="margin-top: -319px; display: block;">
-    <form action="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?" method="post" class="availability-form">
+    <form action="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?" method="post" class="availability-form">
         <h6>Add Availability</h6>
 
-        <div class="scroll-container" style="height: 498px;">
+        <div class="scroll-container" style="height: 298px;">
             <div class="form-radios form-item1">
                 <div class="desc">Apply to:</div>
                 <div class="radios">
@@ -515,8 +510,6 @@ Learner's Availability                    </span></label>
                         <input id="radWeek" type="radio" name="apply-period" value="week">
                       This week</label>
                     <label>
-                        <input id="radMonth" type="radio" name="apply-period" value="month">
-                       Month</label>
                 </div>
 
                 <table class="weekdays" id="week-period-tab">
@@ -617,7 +610,7 @@ Learner's Availability                    </span></label>
             </div>
             <br class="clear">
 
-            <p>Please select any time slots that you wish to have available for lessons.</p>
+            <p>Please select any time slots that you wish to have available for appointments.</p>
             <table class="tab1 tab-availability">
                 <tbody><tr>
                     <th width="40">
@@ -1075,8 +1068,8 @@ Learner's Availability                    </span></label>
         </div>
 
         <div class="buttons">
-            <input type="button" id="availabilityOK" class="blue-button ok-button" value="Ok">
-            <input type="button" class="blue-button cancel-button" value="Cancel">
+            <input type="button" id="availabilityOK" class="btn btn-primary ok-button" value="Ok">
+            <input type="button" class="btn btn-primary cancel-button" value="Cancel">
         </div>
     </form>
 </div>
@@ -1087,7 +1080,7 @@ Learner's Availability                    </span></label>
 <script>var currentRole = 2;</script>
 
 <div class="popup-form popup-win" id="confirmCancelWindow" style="top: 100px; margin-top: 0px">
-    <form action="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?" method="post" class="availability-form">
+    <form action="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?" method="post" class="availability-form">
         <div style="margin: 2px 10px;">
             <h6>Cancel lesson</h6>
             <div id="askcharge">
@@ -1134,12 +1127,12 @@ Learner's Availability                    </span></label>
             </div>
         </div>
         <div id="askbuttons" class="buttons">
-            <input type="button" id="chargeYes" class="blue-button" value="Yes">
-            <input type="button" class="blue-button" id="chargeNo" value="No">
+            <input type="button" id="chargeYes" class="btn btn-primary" value="Yes">
+            <input type="button" class="btn btn-primary" id="chargeNo" value="No">
         </div>
         <div id="normalbuttons" class="buttons">
-            <input type="button" id="cancelAppointmentOK" class="blue-button ok-button" value="Ok">
-            <input type="button" class="blue-button cancel-button" id="cancelAppointmentCancel" value="Cancel">
+            <input type="button" id="cancelAppointmentOK" class="btn btn-primary ok-button" value="Ok">
+            <input type="button" class="btn btn-primary cancel-button" id="cancelAppointmentCancel" value="Cancel">
         </div>
 
     </form>
@@ -1148,33 +1141,11 @@ Learner's Availability                    </span></label>
 
                 </div>
                 <div class="footer no-print">
-                    <div class="left">
-                        © 2017 Language Research Development Group
-                        <br>
-                        Version 3.5.0
-                    </div>
-                    <div class="right">
-                        <div class="lang">
-                            <a href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?lang=en" class="blue-button button-en changelanguageanchor"><span>ENGLISH</span></a> <a href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a?lang=fr" class="blue-button button-fr changelanguageanchor"><span>FRANÇAIS</span></a>
-                        </div>
-                    </div>
                     <div class="center">
-                        <div class="left-border">
-                            <div class="right-border">
-                                <div class="slogans">
-                                    
-                                    <img src="../scripts/js/slogan-en.png" width="105" height="37" class="slogan-en" alt="For the love of English">
-                                    <img src="../scripts/js/slogan-fr.png" width="128" height="37" class="slogan-fr" alt="Pour l&#39;amour du francais">
-
-                                </div>
-
-                            </div>
-                        </div>
+                        © 2017 Concordia University, INSE 6260, Team Hyperion
                     </div>
                 </div>
-
-                    <a href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#" class="chat-button no-print" onclick="chatWindow();">Live Chat</a>
-            </div>
+ </div>
         </div>
     </div>
 
@@ -1207,79 +1178,8 @@ Learner's Availability                    </span></label>
     
 
 
-        <div class="live-chat">
-            <div class="chat-win">
-                <table>
-                    <tbody><tr>
-                        <td>
-                            <div class="top">
-                                <a href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#" class="close-win" style="display: none;">→</a>
-                                <div class="form-item">
-                                    <select id="chat-user-type" class="form-select">
-                                            <option selected="" value="1">Learner</option>
-                                                                                    <option value="2">Tutor</option>
-                                                                                <option value="4">Account Manager</option>
-                                        <option value="6">Pedagogical Adviser</option>
-                                    </select>
-                                </div>
-                                <div class="form-item">
-                                    <input type="text" class="form-text with-text chat-search" value="Search ...">
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="chat-block">
-                            <div class="chat-tabs ui-tabs ui-widget ui-widget-content ui-corner-all">
-                                <ul class="tabs ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
-                                    <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tab-1" aria-labelledby="ui-id-1" aria-selected="true"><a href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#tab-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">Contacts</a></li>
-                                    <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tab-2" aria-labelledby="ui-id-2" aria-selected="false"><a href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#tab-2" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">Recent</a></li>
-                                </ul>
-
-                                <div id="tab-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false">
-                                    <ul class="chat-list" id="chat-list" style="margin: 5px; height: 556px;"></ul>
-                                </div>
-                                <div id="tab-2" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
-                                    <ul class="chat-list" style="height: 556px;"></ul>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody></table>
-            </div>
-
-            <script>
-                var todayText = "Today";
-                var yesterdayText = "Yesterday";
-            </script>
-
-
-        </div>
-        <div class="popup-form popup-win" id="accept-chat-popup">
-            <h6>Live Chat</h6>
-            <p style="text-align: center; padding: 10px 20px;"><span id="chatName"></span> wants to chat with you. Do you accept this invitation?</p>
-            <div class="buttons">
-                <input type="button" class="blue-button ok-button" value="Yes">
-                <input type="button" class="blue-button cancel-button" value="No">
-            </div>
-        </div>
-
-    <input type="hidden" id="sessionTimeoutTitle" value="Session time out">
-
-    <div id="popup-sessiontimeout-notif" class="popup-form popup-win" style="display: none;">
-        <h6 id="popup-event-title">Session time out</h6>
-        <form action="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#" style="padding: 5px 30px 10px 30px;">
-            <input type="hidden" id="is-time-finished" value="">
-
-            <p class="text-1">For security measures, your session will expire in (<span id="left-minute">01</span> minutes). Click OK to keep your session active.</p>
-
-            <p class="text-2" style="display:none;">Your login session has expired.<br>Click OK to log in again.</p>
-
-            <div style="text-align: center">
-                <input type="button" class="blue-button ok-button ok-notif" style="float:none; display:inline-block;" value="OK">
-            </div>
-        </form>
-    </div>
+       
+       
 
 
 
@@ -1314,4 +1214,4 @@ Learner's Availability                    </span></label>
 
 </script>
 
-<div id="jstree-marker" style="display: none;">»</div><div id="jstree-marker-line" style="display: none;"></div><div id="vakata-contextmenu"></div><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a><div class="ui-datepicker-title"><select class="ui-datepicker-month" data-handler="selectMonth" data-event="change"><option value="0">Jan</option><option value="1">Feb</option><option value="2" selected="selected">Mar</option><option value="3">Apr</option><option value="4">May</option><option value="5">Jun</option><option value="6">Jul</option><option value="7">Aug</option><option value="8">Sep</option><option value="9">Oct</option><option value="10">Nov</option><option value="11">Dec</option></select><select class="ui-datepicker-year" data-handler="selectYear" data-event="change"><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017" selected="selected">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option></select></div></div><table class="ui-datepicker-calendar"><thead><tr><th class="ui-datepicker-week-end"><span title="Sunday">Su</span></th><th><span title="Monday">Mo</span></th><th><span title="Tuesday">Tu</span></th><th><span title="Wednesday">We</span></th><th><span title="Thursday">Th</span></th><th><span title="Friday">Fr</span></th><th class="ui-datepicker-week-end"><span title="Saturday">Sa</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">1</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">2</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">3</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">4</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">5</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">6</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">7</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">8</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">9</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">10</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">11</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">12</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">13</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">14</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">15</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">16</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">17</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">18</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">19</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">20</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">21</a></td><td class="  ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default ui-state-highlight" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">22</a></td><td class="  ui-datepicker-current-day" data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default ui-state-active" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">23</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">24</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">25</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">26</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">27</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">28</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">29</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">30</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="http://www.dev2.lrdgtech.ca/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">31</a></td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div><div class="body-overlay" style="height: 1643px; display: none; z-index: 95;"></div></body></html>
+<div id="jstree-marker" style="display: none;">»</div><div id="jstree-marker-line" style="display: none;"></div><div id="vakata-contextmenu"></div><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a><div class="ui-datepicker-title"><select class="ui-datepicker-month" data-handler="selectMonth" data-event="change"><option value="0">Jan</option><option value="1">Feb</option><option value="2" selected="selected">Mar</option><option value="3">Apr</option><option value="4">May</option><option value="5">Jun</option><option value="6">Jul</option><option value="7">Aug</option><option value="8">Sep</option><option value="9">Oct</option><option value="10">Nov</option><option value="11">Dec</option></select><select class="ui-datepicker-year" data-handler="selectYear" data-event="change"><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017" selected="selected">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option></select></div></div><table class="ui-datepicker-calendar"><thead><tr><th class="ui-datepicker-week-end"><span title="Sunday">Su</span></th><th><span title="Monday">Mo</span></th><th><span title="Tuesday">Tu</span></th><th><span title="Wednesday">We</span></th><th><span title="Thursday">Th</span></th><th><span title="Friday">Fr</span></th><th class="ui-datepicker-week-end"><span title="Saturday">Sa</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">1</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">2</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">3</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">4</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">5</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">6</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">7</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">8</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">9</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">10</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">11</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">12</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">13</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">14</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">15</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">16</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">17</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">18</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">19</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">20</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">21</a></td><td class="  ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default ui-state-highlight" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">22</a></td><td class="  ui-datepicker-current-day" data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default ui-state-active" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">23</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">24</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">25</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">26</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">27</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">28</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">29</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">30</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="2" data-year="2017"><a class="ui-state-default" href="#/calendar/week/94c69e4f-0b51-45ac-8fef-e877ead2976a#">31</a></td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div><div class="body-overlay" style="height: 1643px; display: none; z-index: 95;"></div></body></html>
