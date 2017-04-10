@@ -12,7 +12,7 @@ public class CSVUtil {
 
     /*public static void main(String[] args) throws Exception {
 
-        String csvFile = "/Users/klajdi/IdeaProjects/scheduler/src/sample.csv";
+        String csvFile = "/Users/klajdi/IdeaProjects/scheduler/src/data_sample_2-2.csv";
 
         Scanner scanner = new Scanner(new File(csvFile));
         while (scanner.hasNext()) {

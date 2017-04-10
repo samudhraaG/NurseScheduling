@@ -14,8 +14,20 @@ public class ScheduleDriver {
 
     public static  List<Nurse> nurseList = new ArrayList<Nurse>();
     public static TreeMap<Float, String> sortedOptimalSchedules = new TreeMap<Float, String>();
+    public static TreeMap<String, Float> sortedPriceVisits = new TreeMap<String, Float>();
     public static void main(String[] args){
 
+        //Populate Visits Table Should come from csv too
+        sortedPriceVisits.put("1", Float.valueOf(80));
+        sortedPriceVisits.put("4",Float.valueOf(80));
+        sortedPriceVisits.put("9",Float.valueOf(80));
+        sortedPriceVisits.put("10",Float.valueOf(80));
+        sortedPriceVisits.put("2",Float.valueOf(40));
+        sortedPriceVisits.put("3",Float.valueOf(40));
+        sortedPriceVisits.put("5",Float.valueOf(40));
+        sortedPriceVisits.put("6",Float.valueOf(60));
+        sortedPriceVisits.put("7",Float.valueOf(60));
+        sortedPriceVisits.put("8",Float.valueOf(60));
 
         // Temporary database
 
@@ -38,7 +50,7 @@ public class ScheduleDriver {
         // ------ end ---- Temporary database
 
         // Parse the csv
-        String csvFile = "/Users/klajdi/IdeaProjects/NurseScheduling/scheduler/src/sample.csv";
+        String csvFile = "/Users/klajdi/IdeaProjects/NurseScheduling/scheduler/src/data_sample_2-2.csv";
         Scanner scanner = null;
 
         try {
@@ -56,6 +68,7 @@ public class ScheduleDriver {
                 //Create a FeasiblePackage and insert a new ScheduleRecord
 
                 String trimmedVisits = line.get(1).replaceAll("^\"|\"$", "");
+
                // FeasiblePackage feasible = new FeasiblePackage();
                // feasible.schedule.put(Float.valueOf(line.get(2)), trimmedVisits);
 
@@ -159,7 +172,19 @@ public class ScheduleDriver {
         //Keep a list of covered paths
         HashSet<String> coveredPaths = new HashSet<String>();
 
+        //Keep a list of uncovered paths
+        HashSet<String> uncoveredPaths = new HashSet<String>();
+
+        //Calculate Price of Uncovered Visits
+        float priceOfUncoveredVisits = 0;
+
+        //Calucate Cost of Covered Visits
+        float priceOfCoveredVisits = 0;
+
+        //Calculate total Schedule Price
         float schedulePrice = 0f;
+
+        List<String> nurseSelected = new ArrayList<String>();
 
         // Iterate through each nurse in the permutative order
         for (int i = 0; i < order.length(); i++) {
@@ -169,7 +194,7 @@ public class ScheduleDriver {
 
             //Calculate her cheapest schedule
             System.out.println();
-            System.out.println("Calculating cheapest schedule for nurse "+ index+" :");
+            System.out.println("Calculating cheapest schedule for nurse "+ (index+1)+" :");
 
             //Iterate through each entry schedule fo the nurse
             for(Map.Entry<Float,String> entry : nurseList.get(index).getFeasiblePackage().schedule.entrySet()) {
@@ -193,14 +218,15 @@ public class ScheduleDriver {
                 }
 
                 if(!pathCovered){
-                    System.out.println("Cheapest Schedule Calculated for Nurse "+index+" is: ["+key + " => " + value+"]");
+                    System.out.println("Cheapest Schedule Calculated for Nurse "+(index+1)+" is: ["+key + " => " + value+"]");
                     for(int z=0; z< pieces.length ; z++)
                     {
                         coveredPaths.add((pieces[z]).trim());
                         cheapestScheduleCalculated = true;
                     }
 
-                    schedulePrice += key;
+                    priceOfCoveredVisits += key;
+                    nurseSelected.add("{<Nurse: "+(index+1)+">, <Schedule: "+value+">, <Price: "+key+">, <Permutation: "+order+">}");
                 }
 
                 if(cheapestScheduleCalculated){
@@ -209,7 +235,26 @@ public class ScheduleDriver {
             }
         }
 
-        System.out.println("[ Combination: "+order+"]"+"[ Coverage: "+coveredPaths.toString()+" ] [ Total Price: "+schedulePrice+" ]");
-        sortedOptimalSchedules.put(schedulePrice, coveredPaths.toString());
+        //Calculate paths not covered
+
+        Iterator it = sortedPriceVisits.keySet().iterator();
+        while(it.hasNext()){
+            String visit = it.next().toString();
+            if(!(coveredPaths.contains(visit))){
+                uncoveredPaths.add(visit);
+
+                //Calculate Price of Uncovered Visits
+                priceOfUncoveredVisits+= (sortedPriceVisits.get(visit)).floatValue();
+
+            }
+        }
+
+        //Price of this Schedule:
+        schedulePrice = priceOfUncoveredVisits + priceOfCoveredVisits;
+        System.out.println();
+        System.out.println("[ Permutation Order: "+order+" ]"+"[ Covered Visits: "+coveredPaths.toString()+" ] [ Total Cost of Nurse Schedule: "+priceOfCoveredVisits+" ]"
+                +"[ Uncovered Visits: "+uncoveredPaths.toString()+" ][ Price of Uncovered Visits:" +priceOfUncoveredVisits+"] [* TOTAL PRICE of Schedule: "+schedulePrice+" *]");
+
+        sortedOptimalSchedules.put(schedulePrice, nurseSelected.toString()+" - "+coveredPaths.toString()+" - "+uncoveredPaths.toString());
     }
 }
