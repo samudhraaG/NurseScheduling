@@ -13,6 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class ScheduleDriver {
 
     public static  List<Nurse> nurseList = new ArrayList<Nurse>();
+    public static TreeMap<Float, String> sortedOptimalSchedules = new TreeMap<Float, String>();
     public static void main(String[] args){
 
 
@@ -126,11 +127,9 @@ public class ScheduleDriver {
 
         long end_time = System.currentTimeMillis();
 
-        System.out.println((end_time-start_time)/1000);
+        System.out.println("total sorting execution time: "+(end_time-start_time)/1000);
 
-
-
-
+        System.out.println(sortedOptimalSchedules.toString());
 
     }
 
@@ -141,8 +140,11 @@ public class ScheduleDriver {
     private static void permutation(String prefix, String str) {
         int n = str.length();
         if (n == 0) {
-            System.out.println(prefix);
+            System.out.println("--------- Covering permutation: "+prefix+" -----------");
             calculateOptimalSchedule(prefix);
+            System.out.println("---------------------------");
+            System.out.println();
+            System.out.println();
 
         }
         else {
@@ -155,22 +157,59 @@ public class ScheduleDriver {
     public static void calculateOptimalSchedule(String order){
 
         //Keep a list of covered paths
-        List<String> coveredPaths = new ArrayList<String>();
+        HashSet<String> coveredPaths = new HashSet<String>();
+
+        float schedulePrice = 0f;
 
         // Iterate through each nurse in the permutative order
         for (int i = 0; i < order.length(); i++) {
+
+            // Derive the integer order of that nurse
             int index = Integer.valueOf(Character.toString(order.charAt(i)));
 
-           // Collection<Float> prices = nurseList.get(index).getFeasiblePackage().schedule.values();
+            //Calculate her cheapest schedule
+            System.out.println();
+            System.out.println("Calculating cheapest schedule for nurse "+ index+" :");
 
-            //List< Float > list = new ArrayList< Float >( prices );
+            //Iterate through each entry schedule fo the nurse
+            for(Map.Entry<Float,String> entry : nurseList.get(index).getFeasiblePackage().schedule.entrySet()) {
+                Float key = entry.getKey();
+                String value = entry.getValue();
 
-           // Collections.sort( list );
+                System.out.println(key + " => " + value);
 
-           // System.out.println(list.toString());
+                boolean pathCovered = false;
+                boolean cheapestScheduleCalculated = false;
 
+                //Explode the first cheapest schedule in pieces and check if any is in the covered Paths
+                String[] pieces = (value).split(",");
+
+                for(int j=0; j< pieces.length ; j++)
+                {
+                    //If visit is in covered path, dont consider it,move to the next one
+                    if(coveredPaths.contains((pieces[j]).trim())){
+                        pathCovered = true;
+                    }
+                }
+
+                if(!pathCovered){
+                    System.out.println("Cheapest Schedule Calculated for Nurse "+index+" is: ["+key + " => " + value+"]");
+                    for(int z=0; z< pieces.length ; z++)
+                    {
+                        coveredPaths.add((pieces[z]).trim());
+                        cheapestScheduleCalculated = true;
+                    }
+
+                    schedulePrice += key;
+                }
+
+                if(cheapestScheduleCalculated){
+                    break;
+                }
+            }
         }
 
-
+        System.out.println("[ Combination: "+order+"]"+"[ Coverage: "+coveredPaths.toString()+" ] [ Total Price: "+schedulePrice+" ]");
+        sortedOptimalSchedules.put(schedulePrice, coveredPaths.toString());
     }
 }

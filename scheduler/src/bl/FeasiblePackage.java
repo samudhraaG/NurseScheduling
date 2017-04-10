@@ -10,7 +10,7 @@ import java.util.TreeMap;
  */
 public class FeasiblePackage {
 
-    public Map<Float, String> schedule;
+    public TreeMap<Float, String> schedule;
 
     public FeasiblePackage(){
 
