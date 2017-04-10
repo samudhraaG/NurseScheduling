@@ -3,17 +3,18 @@ package bl;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 
 /**
  * Created by klajdi on 4/9/17.
  */
 public class FeasiblePackage {
 
-    public Map<String, Float> schedule;
+    public Map<Float, String> schedule;
 
     public FeasiblePackage(){
 
-        this.schedule = new HashMap<String, Float>();
+        this.schedule = new TreeMap<Float, String>();
 
     }
 }
