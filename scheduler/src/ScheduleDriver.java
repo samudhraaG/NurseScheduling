@@ -5,10 +5,9 @@ import utils.CSVUtil;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
-import java.util.concurrent.TimeUnit;
 
 /**
- * Created by klajdi on 4/9/17.
+ * Created by klajdi on 3/9/11.
  */
 public class ScheduleDriver {
 
@@ -17,24 +16,29 @@ public class ScheduleDriver {
     public static TreeMap<String, Float> sortedPriceVisits = new TreeMap<String, Float>();
     public static void main(String[] args){
 
-        //Populate Visits Table Should come from csv too
-        sortedPriceVisits.put("1", Float.valueOf(80));
-        sortedPriceVisits.put("4",Float.valueOf(80));
-        sortedPriceVisits.put("9",Float.valueOf(80));
-        sortedPriceVisits.put("10",Float.valueOf(80));
-        sortedPriceVisits.put("2",Float.valueOf(40));
-        sortedPriceVisits.put("3",Float.valueOf(40));
-        sortedPriceVisits.put("5",Float.valueOf(40));
-        sortedPriceVisits.put("6",Float.valueOf(60));
-        sortedPriceVisits.put("7",Float.valueOf(60));
-        sortedPriceVisits.put("8",Float.valueOf(60));
+        //Build the price List
+        String csvPriceFile = "/Users/klajdi/IdeaProjects/NurseScheduling/scheduler/src/sample_data/price_list_2-2.csv";
+        Scanner priceScanner = null;
+
+        try {
+            priceScanner = new Scanner(new File(csvPriceFile));
+
+            //Parser, analyze the csv line by line
+            while (priceScanner.hasNext()) {
+                List<String> line = CSVUtil.parseLine(priceScanner.nextLine());
+                System.out.println("[visit= " + line.get(0) + ", price= " + line.get(1) + "]");
+                sortedPriceVisits.put(line.get(0), Float.valueOf(line.get(1)));
+            }
+        }
+        catch (FileNotFoundException e1) {
+            e1.printStackTrace();
+        }
+        finally {
+            priceScanner.close();
+        }
+
 
         // Temporary database
-
-        //List of nurses
-
-        //List of visits
-        // TODO: 4/9/17
 
         //List of ScheduleRecords
 
@@ -42,15 +46,8 @@ public class ScheduleDriver {
 
         Set<Nurse> nurses = new TreeSet<Nurse>();
 
-        //List<Nurse> nurseList = new ArrayList<Nurse>();
-
-
-
-
-        // ------ end ---- Temporary database
-
         // Parse the csv
-        String csvFile = "/Users/klajdi/IdeaProjects/NurseScheduling/scheduler/src/data_sample_2-2.csv";
+        String csvFile = "/Users/klajdi/IdeaProjects/NurseScheduling/scheduler/src/sample_data/data_sample_2-2.csv";
         Scanner scanner = null;
 
         try {
