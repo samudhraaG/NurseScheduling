@@ -17,7 +17,7 @@ public class ScheduleDriver {
     public static void main(String[] args){
 
         //Build the price List
-        String csvPriceFile = "/Users/klajdi/IdeaProjects/NurseScheduling/scheduler/src/sample_data/price_list_2-2.csv";
+        String csvPriceFile = "/Users/klajdi/IdeaProjects/NurseScheduling/scheduler/src/sample_data/price_list_1.csv";
         Scanner priceScanner = null;
 
         try {
@@ -47,7 +47,7 @@ public class ScheduleDriver {
         Set<Nurse> nurses = new TreeSet<Nurse>();
 
         // Parse the csv
-        String csvFile = "/Users/klajdi/IdeaProjects/NurseScheduling/scheduler/src/sample_data/data_sample_2-2.csv";
+        String csvFile = "/Users/klajdi/IdeaProjects/NurseScheduling/scheduler/src/sample_data/data_sample_1.csv";
         Scanner scanner = null;
 
         try {
@@ -66,12 +66,7 @@ public class ScheduleDriver {
 
                 String trimmedVisits = line.get(1).replaceAll("^\"|\"$", "");
 
-               // FeasiblePackage feasible = new FeasiblePackage();
-               // feasible.schedule.put(Float.valueOf(line.get(2)), trimmedVisits);
-
                 System.out.println("nurse [id= " + line.get(0) + ", bundle= " + line.get(1) + " , price=" + line.get(2) + "]");
-
-
 
                 //Iterator it = nurses.iterator();
                 Iterator it = nurseList.iterator();
