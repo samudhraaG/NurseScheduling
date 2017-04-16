@@ -123,7 +123,6 @@ public class ScheduleDriver {
 
         }
 
-        System.out.println(arrangement);
 
 
         long start_time = System.currentTimeMillis();
@@ -132,7 +131,7 @@ public class ScheduleDriver {
 
         long end_time = System.currentTimeMillis();
 
-        System.out.println("total sorting execution time: "+(end_time-start_time)/1000);
+        System.out.println("total sorting execution time: "+(end_time-start_time)+ " ms");
 
         System.out.println(sortedOptimalSchedules.toString());
 
